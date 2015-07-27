@@ -14,3 +14,5 @@ using System.Security;
 [assembly: AssemblyDelaySign(false)]
 [assembly: AssemblyKeyFile("../../nunit.snk")]
 [assembly: AssemblyKeyName("")]
+[assembly: AssemblyTitleAttribute("nunit.framework-unity")]
+[assembly: AssemblyDescriptionAttribute("Custom build to work with Unity")]
