@@ -4,6 +4,8 @@
 // obtain a copy of the license at http://nunit.org
 // ****************************************************************
 
+using System;
+
 namespace NUnit.Framework.Constraints
 {
     /// <summary>
@@ -12,6 +14,7 @@ namespace NUnit.Framework.Constraints
     /// </summary>
     public abstract class BasicConstraint : Constraint
     {
+        private static Type GameObjectType = Type.GetType ("UnityEngine.GameObject, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null");
         private readonly object expected;
         private readonly string description;
 
@@ -33,6 +36,12 @@ namespace NUnit.Framework.Constraints
         /// <returns>True for success, false for failure</returns>
         public override bool Matches(object actual)
         {
+            if (actual != null && GameObjectType !=null && GameObjectType.IsInstanceOfType (actual))
+            {
+                var result = GameObjectType.GetMethod ("GetInstanceID").Invoke (actual, null);
+                if((int)result == 0) actual = null;
+            }
+
             this.actual = actual;
 
             if (actual == null && expected == null)
