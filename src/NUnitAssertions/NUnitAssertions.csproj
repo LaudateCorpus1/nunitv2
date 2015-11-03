@@ -357,6 +357,9 @@
     <Compile Include="..\NUnitFramework\framework\Guard.cs">
       <Link>Guard.cs</Link>
     </Compile>
+    <Compile Include="..\NUnitFramework\framework\Throws.cs">
+      <Link>Throws.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Xml" />
