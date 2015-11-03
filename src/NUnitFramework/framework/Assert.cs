@@ -74,8 +74,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="message">The message to initialize the <see cref="AssertionException"/> with.</param>
         /// <param name="args">Arguments to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Pass(string message, params object[] args)
         {
             if (message == null) message = string.Empty;
@@ -91,8 +90,7 @@ namespace UnityEngine.NUnit.Framework
         /// of success returned to NUnit.
         /// </summary>
         /// <param name="message">The message to initialize the <see cref="AssertionException"/> with.</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Pass(string message)
         {
             Assert.Pass(message, null);
@@ -103,8 +101,7 @@ namespace UnityEngine.NUnit.Framework
         /// that are passed in. This allows a test to be cut short, with a result
         /// of success returned to NUnit.
         /// </summary>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Pass()
         {
             Assert.Pass(string.Empty, null);
@@ -120,8 +117,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="message">The message to initialize the <see cref="AssertionException"/> with.</param>
         /// <param name="args">Arguments to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Fail(string message, params object[] args)
         {
             if (message == null) message = string.Empty;
@@ -136,8 +132,7 @@ namespace UnityEngine.NUnit.Framework
         /// passed in. This is used by the other Assert functions. 
         /// </summary>
         /// <param name="message">The message to initialize the <see cref="AssertionException"/> with.</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Fail(string message)
         {
             Assert.Fail(message, null);
@@ -147,8 +142,7 @@ namespace UnityEngine.NUnit.Framework
         /// Throws an <see cref="AssertionException"/>. 
         /// This is used by the other Assert functions. 
         /// </summary>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Fail()
         {
             Assert.Fail(string.Empty, null);
@@ -164,8 +158,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="message">The message to initialize the <see cref="AssertionException"/> with.</param>
         /// <param name="args">Arguments to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Ignore(string message, params object[] args)
         {
             if (message == null) message = string.Empty;
@@ -180,8 +173,7 @@ namespace UnityEngine.NUnit.Framework
         /// passed in. This causes the test to be reported as ignored. 
         /// </summary>
         /// <param name="message">The message to initialize the <see cref="AssertionException"/> with.</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Ignore(string message)
         {
             Assert.Ignore(message, null);
@@ -191,8 +183,7 @@ namespace UnityEngine.NUnit.Framework
         /// Throws an <see cref="IgnoreException"/>. 
         /// This causes the test to be reported as ignored. 
         /// </summary>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Ignore()
         {
             Assert.Ignore(string.Empty, null);
@@ -207,8 +198,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="message">The message to initialize the <see cref="InconclusiveException"/> with.</param>
         /// <param name="args">Arguments to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Inconclusive(string message, params object[] args)
         {
             if (message == null) message = string.Empty;
@@ -223,8 +213,7 @@ namespace UnityEngine.NUnit.Framework
         /// passed in. This causes the test to be reported as inconclusive. 
         /// </summary>
         /// <param name="message">The message to initialize the <see cref="InconclusiveException"/> with.</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Inconclusive(string message)
         {
             Assert.Inconclusive(message, null);
@@ -234,8 +223,7 @@ namespace UnityEngine.NUnit.Framework
         /// Throws an <see cref="InconclusiveException"/>. 
         /// This causes the test to be reported as Inconclusive. 
         /// </summary>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void Inconclusive()
         {
             Assert.Inconclusive(string.Empty, null);
@@ -254,8 +242,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="actual">The actual value to test</param>
         /// <param name="expression">A Constraint to be applied</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(object actual, IResolveConstraint expression)
         {
             Assert.That(actual, expression, null, null);
@@ -268,8 +255,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value to test</param>
         /// <param name="expression">A Constraint to be applied</param>
         /// <param name="message">The message that will be displayed on failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(object actual, IResolveConstraint expression, string message)
         {
             Assert.That(actual, expression, message, null);
@@ -283,8 +269,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expression">A Constraint expression to be applied</param>
         /// <param name="message">The message that will be displayed on failure</param>
         /// <param name="args">Arguments to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(object actual, IResolveConstraint expression, string message, params object[] args)
         {
             Constraint constraint = expression.Resolve();
@@ -307,8 +292,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="condition">The evaluated condition</param>
         /// <param name="message">The message to display if the condition is false</param>
         /// <param name="args">Arguments to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(bool condition, string message, params object[] args)
         {
             Assert.That(condition, Is.True, message, args);
@@ -320,8 +304,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="condition">The evaluated condition</param>
         /// <param name="message">The message to display if the condition is false</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(bool condition, string message)
         {
             Assert.That(condition, Is.True, message, null);
@@ -332,8 +315,7 @@ namespace UnityEngine.NUnit.Framework
         /// an <see cref="AssertionException"/>.
         /// </summary>
         /// <param name="condition">The evaluated condition</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(bool condition)
         {
             Assert.That(condition, Is.True, null, null);
@@ -349,8 +331,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="actual">The actual value to test</param>
         /// <param name="constraint">A Constraint to be applied</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(ref bool actual, IResolveConstraint constraint)
         {
             Assert.That(ref actual, constraint.Resolve(), null, null);
@@ -363,8 +344,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value to test</param>
         /// <param name="constraint">A Constraint to be applied</param>
         /// <param name="message">The message that will be displayed on failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(ref bool actual, IResolveConstraint constraint, string message)
         {
             Assert.That(ref actual, constraint.Resolve(), message, null);
@@ -378,8 +358,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expression">A Constraint expression to be applied</param>
         /// <param name="message">The message that will be displayed on failure</param>
         /// <param name="args">Arguments to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(ref bool actual, IResolveConstraint expression, string message, params object[] args)
         {
             Constraint constraint = expression.Resolve();
@@ -405,8 +384,7 @@ namespace UnityEngine.NUnit.Framework
 		/// </summary>
 		/// <param name="del">An ActualValueDelegate returning the value to be tested</param>
         /// <param name="expr">A Constraint expression to be applied</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That<T>(ActualValueDelegate<T> del, IResolveConstraint expr)
 		{
 			Assert.That(del, expr.Resolve(), null, null);
@@ -419,8 +397,7 @@ namespace UnityEngine.NUnit.Framework
 		/// <param name="del">An ActualValueDelegate returning the value to be tested</param>
         /// <param name="expr">A Constraint expression to be applied</param>
         /// <param name="message">The message that will be displayed on failure</param>
-		[Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That<T>(ActualValueDelegate<T> del, IResolveConstraint expr, string message)
 		{
 			Assert.That(del, expr.Resolve(), message, null);
@@ -434,8 +411,7 @@ namespace UnityEngine.NUnit.Framework
 		/// <param name="expr">A Constraint expression to be applied</param>
 		/// <param name="message">The message that will be displayed on failure</param>
 		/// <param name="args">Arguments to be used in formatting the message</param>
-		[Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That<T>(ActualValueDelegate<T> del, IResolveConstraint expr, string message, params object[] args)
 		{
 			Constraint constraint = expr.Resolve();
@@ -455,8 +431,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="del">An ActualValueDelegate returning the value to be tested</param>
         /// <param name="expr">A Constraint expression to be applied</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(ActualValueDelegate del, IResolveConstraint expr)
         {
             Assert.That(del, expr.Resolve(), null, null);
@@ -469,8 +444,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="del">An ActualValueDelegate returning the value to be tested</param>
         /// <param name="expr">A Constraint expression to be applied</param>
         /// <param name="message">The message that will be displayed on failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(ActualValueDelegate del, IResolveConstraint expr, string message)
         {
             Assert.That(del, expr.Resolve(), message, null);
@@ -484,8 +458,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expr">A Constraint expression to be applied</param>
         /// <param name="message">The message that will be displayed on failure</param>
         /// <param name="args">Arguments to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(ActualValueDelegate del, IResolveConstraint expr, string message, params object[] args)
         {
             Constraint constraint = expr.Resolve();
@@ -511,8 +484,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="actual">The actual value to test</param>
         /// <param name="expression">A Constraint to be applied</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That<T>(ref T actual, IResolveConstraint expression)
         {
             Assert.That(ref actual, expression, null, null);
@@ -525,8 +497,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value to test</param>
         /// <param name="expression">A Constraint to be applied</param>
         /// <param name="message">The message that will be displayed on failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That<T>(ref T actual, IResolveConstraint expression, string message)
         {
             Assert.That(ref actual, expression, message, null);
@@ -540,8 +511,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expression">A Constraint to be applied</param>
         /// <param name="message">The message that will be displayed on failure</param>
         /// <param name="args">Arguments to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That<T>(ref T actual, IResolveConstraint expression, string message, params object[] args)
         {
             Constraint constraint = expression.Resolve();
@@ -565,8 +535,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="code">A TestDelegate to be executed</param>
         /// <param name="constraint">A ThrowsConstraint used in the test</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void That(TestDelegate code, IResolveConstraint constraint)
         {
             Assert.That((object)code, constraint);
@@ -585,8 +554,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="actual">The actual value to test</param>
         /// <param name="expression">A Constraint to be applied</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void ByVal(object actual, IResolveConstraint expression)
         {
             Assert.That(actual, expression, null, null);
@@ -601,8 +569,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value to test</param>
         /// <param name="expression">A Constraint to be applied</param>
         /// <param name="message">The message that will be displayed on failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void ByVal(object actual, IResolveConstraint expression, string message)
         {
             Assert.That(actual, expression, message, null);
@@ -622,8 +589,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expression">A Constraint expression to be applied</param>
         /// <param name="message">The message that will be displayed on failure</param>
         /// <param name="args">Arguments to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         static public void ByVal(object actual, IResolveConstraint expression, string message, params object[] args)
         {
             Assert.That(actual, expression, message, args);
@@ -889,8 +855,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="code">A TestDelegate</param>
         /// <param name="message">The message that will be displayed on failure</param>
         /// <param name="args">Arguments to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void DoesNotThrow(TestDelegate code, string message, params object[] args)
         {
             Assert.That(code, new ThrowsNothingConstraint(), message, args);
@@ -901,8 +866,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="code">A TestDelegate</param>
         /// <param name="message">The message that will be displayed on failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void DoesNotThrow(TestDelegate code, string message)
         {
             DoesNotThrow(code, message, null);
@@ -912,8 +876,7 @@ namespace UnityEngine.NUnit.Framework
         /// Verifies that a delegate does not throw an exception.
         /// </summary>
         /// <param name="code">A TestDelegate</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void DoesNotThrow(TestDelegate code)
         {
             DoesNotThrow(code, string.Empty, null);
@@ -932,8 +895,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="condition">The evaluated condition</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void True(bool condition, string message, params object[] args)
         {
             Assert.That(condition, Is.True, message, args);
@@ -944,8 +906,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="condition">The evaluated condition</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void True(bool condition, string message)
         {
             Assert.That(condition, Is.True, message, null);
@@ -955,8 +916,7 @@ namespace UnityEngine.NUnit.Framework
         /// an <see cref="AssertionException"/>.
         /// </summary>
         /// <param name="condition">The evaluated condition</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void True(bool condition)
         {
             Assert.That(condition, Is.True, null, null);
@@ -969,8 +929,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="condition">The evaluated condition</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsTrue(bool condition, string message, params object[] args)
         {
             Assert.That(condition, Is.True, message, args);
@@ -981,8 +940,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="condition">The evaluated condition</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsTrue(bool condition, string message)
         {
             Assert.That(condition, Is.True, message, null);
@@ -992,8 +950,7 @@ namespace UnityEngine.NUnit.Framework
         /// an <see cref="AssertionException"/>.
         /// </summary>
         /// <param name="condition">The evaluated condition</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsTrue(bool condition)
         {
             Assert.That(condition, Is.True, null, null);
@@ -1010,8 +967,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="condition">The evaluated condition</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void False(bool condition, string message, params object[] args)
         {
             Assert.That(condition, Is.False, message, args);
@@ -1022,8 +978,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary> 
         /// <param name="condition">The evaluated condition</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void False(bool condition, string message)
         {
             Assert.That(condition, Is.False, message, null);
@@ -1033,8 +988,7 @@ namespace UnityEngine.NUnit.Framework
         /// an <see cref="AssertionException"/>.
         /// </summary> 
         /// <param name="condition">The evaluated condition</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void False(bool condition)
         {
             Assert.That(condition, Is.False, null, null);
@@ -1047,8 +1001,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="condition">The evaluated condition</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsFalse(bool condition, string message, params object[] args)
         {
             Assert.That(condition, Is.False, message, args);
@@ -1059,8 +1012,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary> 
         /// <param name="condition">The evaluated condition</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsFalse(bool condition, string message)
         {
             Assert.That(condition, Is.False, message, null);
@@ -1070,8 +1022,7 @@ namespace UnityEngine.NUnit.Framework
         /// an <see cref="AssertionException"/>.
         /// </summary> 
         /// <param name="condition">The evaluated condition</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsFalse(bool condition)
         {
             Assert.That(condition, Is.False, null, null);
@@ -1089,8 +1040,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="anObject">The object that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void NotNull(object anObject, string message, params object[] args)
         {
             Assert.That(anObject, Is.Not.Null, message, args);
@@ -1102,8 +1052,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="anObject">The object that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void NotNull(object anObject, string message)
         {
             Assert.That(anObject, Is.Not.Null, message, null);
@@ -1114,8 +1063,7 @@ namespace UnityEngine.NUnit.Framework
         /// is thrown.
         /// </summary>
         /// <param name="anObject">The object that is to be tested</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void NotNull(object anObject)
         {
             Assert.That(anObject, Is.Not.Null, null, null);
@@ -1129,8 +1077,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="anObject">The object that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotNull(object anObject, string message, params object[] args)
         {
             Assert.That(anObject, Is.Not.Null, message, args);
@@ -1142,8 +1089,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="anObject">The object that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotNull(object anObject, string message)
         {
             Assert.That(anObject, Is.Not.Null, message, null);
@@ -1154,8 +1100,7 @@ namespace UnityEngine.NUnit.Framework
         /// is thrown.
         /// </summary>
         /// <param name="anObject">The object that is to be tested</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotNull(object anObject)
         {
             Assert.That(anObject, Is.Not.Null, null, null);
@@ -1173,8 +1118,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="anObject">The object that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Null(object anObject, string message, params object[] args)
         {
             Assert.That(anObject, Is.Null, message, args);
@@ -1186,8 +1130,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="anObject">The object that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Null(object anObject, string message)
         {
             Assert.That(anObject, Is.Null, message, null);
@@ -1198,8 +1141,7 @@ namespace UnityEngine.NUnit.Framework
         /// is thrown.
         /// </summary>
         /// <param name="anObject">The object that is to be tested</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Null(object anObject)
         {
             Assert.That(anObject, Is.Null, null, null);
@@ -1213,8 +1155,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="anObject">The object that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNull(object anObject, string message, params object[] args)
         {
             Assert.That(anObject, Is.Null, message, args);
@@ -1226,8 +1167,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="anObject">The object that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNull(object anObject, string message)
         {
             Assert.That(anObject, Is.Null, message, null);
@@ -1238,8 +1178,7 @@ namespace UnityEngine.NUnit.Framework
         /// is thrown.
         /// </summary>
         /// <param name="anObject">The object that is to be tested</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNull(object anObject)
         {
             Assert.That(anObject, Is.Null, null, null);
@@ -1259,8 +1198,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(int expected, int actual, string message, params object[] args)
         {
             Assert.That(actual, Is.EqualTo(expected), message, args);
@@ -1272,8 +1210,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(int expected, int actual, string message)
         {
             Assert.That(actual, Is.EqualTo(expected), message, null);
@@ -1284,8 +1221,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(int expected, int actual)
         {
             Assert.That(actual, Is.EqualTo(expected), null, null);
@@ -1303,8 +1239,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(long expected, long actual, string message, params object[] args)
         {
             Assert.That(actual, Is.EqualTo(expected), message, args);
@@ -1316,8 +1251,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(long expected, long actual, string message)
         {
             Assert.That(actual, Is.EqualTo(expected), message, null);
@@ -1328,8 +1262,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(long expected, long actual)
         {
             Assert.That(actual, Is.EqualTo(expected), null, null);
@@ -1347,8 +1280,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(uint expected, uint actual, string message, params object[] args)
         {
             Assert.That(actual, Is.EqualTo(expected), message, args);
@@ -1360,8 +1292,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(uint expected, uint actual, string message)
         {
             Assert.That(actual, Is.EqualTo(expected), message, null);
@@ -1372,8 +1303,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(uint expected, uint actual)
         {
             Assert.That(actual, Is.EqualTo(expected), null, null);
@@ -1391,8 +1321,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(ulong expected, ulong actual, string message, params object[] args)
         {
             Assert.That(actual, Is.EqualTo(expected), message, args);
@@ -1404,8 +1333,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(ulong expected, ulong actual, string message)
         {
             Assert.That(actual, Is.EqualTo(expected), message, null);
@@ -1416,8 +1344,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(ulong expected, ulong actual)
         {
             Assert.That(actual, Is.EqualTo(expected), null, null);
@@ -1435,8 +1362,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(decimal expected, decimal actual, string message, params object[] args)
         {
             Assert.That(actual, Is.EqualTo(expected), message, args);
@@ -1448,8 +1374,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(decimal expected, decimal actual, string message)
         {
             Assert.That(actual, Is.EqualTo(expected), message, null);
@@ -1460,8 +1385,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(decimal expected, decimal actual)
         {
             Assert.That(actual, Is.EqualTo(expected), null, null);
@@ -1483,8 +1407,7 @@ namespace UnityEngine.NUnit.Framework
         /// the expected and the actual</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(double expected, double actual, double delta, string message, params object[] args)
         {
             AssertDoublesAreEqual(expected, actual, delta, message, args);
@@ -1500,8 +1423,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="delta">The maximum acceptable difference between the
         /// the expected and the actual</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(double expected, double actual, double delta, string message)
         {
             AssertDoublesAreEqual(expected, actual, delta, message, null);
@@ -1516,8 +1438,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="delta">The maximum acceptable difference between the
         /// the expected and the actual</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(double expected, double actual, double delta)
         {
             AssertDoublesAreEqual(expected, actual, delta, null, null);
@@ -1536,8 +1457,7 @@ namespace UnityEngine.NUnit.Framework
         /// the expected and the actual</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(double expected, double? actual, double delta, string message, params object[] args)
         {
             AssertDoublesAreEqual(expected, (double)actual, delta, message, args);
@@ -1553,8 +1473,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="delta">The maximum acceptable difference between the
         /// the expected and the actual</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(double expected, double? actual, double delta, string message)
         {
             AssertDoublesAreEqual(expected, (double)actual, delta, message, null);
@@ -1569,8 +1488,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="delta">The maximum acceptable difference between the
         /// the expected and the actual</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(double expected, double? actual, double delta)
         {
             AssertDoublesAreEqual(expected, (double)actual, delta, null, null);
@@ -1591,8 +1509,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(object expected, object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.EqualTo(expected), message, args);
@@ -1606,8 +1523,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The value that is expected</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(object expected, object actual, string message)
         {
             Assert.That(actual, Is.EqualTo(expected), message, null);
@@ -1620,8 +1536,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The value that is expected</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreEqual(object expected, object actual)
         {
             Assert.That(actual, Is.EqualTo(expected), null, null);
@@ -1643,8 +1558,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(int expected, int actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, args);
@@ -1656,8 +1570,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(int expected, int actual, string message)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, null);
@@ -1668,8 +1581,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(int expected, int actual)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), null, null);
@@ -1687,8 +1599,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(long expected, long actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, args);
@@ -1700,8 +1611,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(long expected, long actual, string message)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, null);
@@ -1712,8 +1622,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(long expected, long actual)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), null, null);
@@ -1731,8 +1640,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(uint expected, uint actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, args);
@@ -1744,8 +1652,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(uint expected, uint actual, string message)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, null);
@@ -1756,8 +1663,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(uint expected, uint actual)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), null, null);
@@ -1775,8 +1681,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(ulong expected, ulong actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, args);
@@ -1788,8 +1693,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(ulong expected, ulong actual, string message)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, null);
@@ -1800,8 +1704,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(ulong expected, ulong actual)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), null, null);
@@ -1819,8 +1722,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(decimal expected, decimal actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, args);
@@ -1832,8 +1734,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(decimal expected, decimal actual, string message)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, null);
@@ -1844,8 +1745,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(decimal expected, decimal actual)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), null, null);
@@ -1863,8 +1763,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(float expected, float actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, args);
@@ -1876,8 +1775,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(float expected, float actual, string message)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, null);
@@ -1888,8 +1786,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(float expected, float actual)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), null, null);
@@ -1907,8 +1804,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(double expected, double actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, args);
@@ -1920,8 +1816,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(double expected, double actual, string message)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, null);
@@ -1932,8 +1827,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected value</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(double expected, double actual)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), null, null);
@@ -1953,8 +1847,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(object expected, object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, args);
@@ -1968,8 +1861,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The value that is expected</param>
         /// <param name="actual">The actual value</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(object expected, object actual, string message)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), message, null);
@@ -1982,8 +1874,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The value that is expected</param>
         /// <param name="actual">The actual value</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotEqual(object expected, object actual)
         {
             Assert.That(actual, Is.Not.EqualTo(expected), null, null);
@@ -2003,8 +1894,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual object</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreSame(object expected, object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.SameAs(expected), message, args);
@@ -2016,8 +1906,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected object</param>
         /// <param name="actual">The actual object</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreSame(object expected, object actual, string message)
         {
             Assert.That(actual, Is.SameAs(expected), message, null);
@@ -2028,8 +1917,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected object</param>
         /// <param name="actual">The actual object</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreSame(object expected, object actual)
         {
             Assert.That(actual, Is.SameAs(expected), null, null);
@@ -2047,8 +1935,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The actual object</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotSame(object expected, object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.SameAs(expected), message, args);
@@ -2060,8 +1947,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected object</param>
         /// <param name="actual">The actual object</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotSame(object expected, object actual, string message)
         {
             Assert.That(actual, Is.Not.SameAs(expected), message, null);
@@ -2072,8 +1958,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected object</param>
         /// <param name="actual">The actual object</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void AreNotSame(object expected, object actual)
         {
             Assert.That(actual, Is.Not.SameAs(expected), null, null);
@@ -2091,8 +1976,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="aDouble">The value that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNaN(double aDouble, string message, params object[] args)
         {
             Assert.That(aDouble, Is.NaN, message, args);
@@ -2104,8 +1988,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="aDouble">The value that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNaN(double aDouble, string message)
         {
             Assert.That(aDouble, Is.NaN, message, null);
@@ -2116,8 +1999,7 @@ namespace UnityEngine.NUnit.Framework
         /// is thrown.
         /// </summary>
         /// <param name="aDouble">The value that is to be tested</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNaN(double aDouble)
         {
             Assert.That(aDouble, Is.NaN, null, null);
@@ -2132,8 +2014,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="aDouble">The value that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNaN(double? aDouble, string message, params object[] args)
         {
             Assert.That(aDouble, Is.NaN, message, args);
@@ -2145,8 +2026,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="aDouble">The value that is to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNaN(double? aDouble, string message)
         {
             Assert.That(aDouble, Is.NaN, message, null);
@@ -2157,8 +2037,7 @@ namespace UnityEngine.NUnit.Framework
         /// is thrown.
         /// </summary>
         /// <param name="aDouble">The value that is to be tested</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNaN(double? aDouble)
         {
             Assert.That(aDouble, Is.NaN, null, null);
@@ -2175,8 +2054,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="aString">The string to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsEmpty(string aString, string message, params object[] args)
         {
             Assert.That(aString, new EmptyStringConstraint(), message, args);
@@ -2186,8 +2064,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="aString">The string to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsEmpty(string aString, string message)
         {
             Assert.That(aString, new EmptyStringConstraint(), message, null);
@@ -2196,8 +2073,7 @@ namespace UnityEngine.NUnit.Framework
         /// Assert that a string is empty - that is equal to string.Empty
         /// </summary>
         /// <param name="aString">The string to be tested</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsEmpty(string aString)
         {
             Assert.That(aString, new EmptyStringConstraint(), null, null);
@@ -2213,8 +2089,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="collection">An array, list or other collection implementing ICollection</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsEmpty(IEnumerable collection, string message, params object[] args)
         {
             Assert.That(collection, new EmptyCollectionConstraint(), message, args);
@@ -2224,8 +2099,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="collection">An array, list or other collection implementing ICollection</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsEmpty(IEnumerable collection, string message)
         {
             Assert.That(collection, new EmptyCollectionConstraint(), message, null);
@@ -2234,8 +2108,7 @@ namespace UnityEngine.NUnit.Framework
         /// Assert that an array, list or other collection is empty
         /// </summary>
         /// <param name="collection">An array, list or other collection implementing ICollection</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsEmpty(IEnumerable collection)
         {
             Assert.That(collection, new EmptyCollectionConstraint(), null, null);
@@ -2251,8 +2124,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="aString">The string to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotEmpty(string aString, string message, params object[] args)
         {
             Assert.That(aString, Is.Not.Empty, message, args);
@@ -2262,8 +2134,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="aString">The string to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotEmpty(string aString, string message)
         {
             Assert.That(aString, Is.Not.Empty, message, null);
@@ -2272,8 +2143,7 @@ namespace UnityEngine.NUnit.Framework
         /// Assert that a string is not empty - that is not equal to string.Empty
         /// </summary>
         /// <param name="aString">The string to be tested</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotEmpty(string aString)
         {
             Assert.That(aString, Is.Not.Empty, null, null);
@@ -2289,8 +2159,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="collection">An array, list or other collection implementing ICollection</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotEmpty(IEnumerable collection, string message, params object[] args)
         {
             Assert.That(collection, Is.Not.Empty, message, args);
@@ -2300,8 +2169,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="collection">An array, list or other collection implementing ICollection</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotEmpty(IEnumerable collection, string message)
         {
             Assert.That(collection, Is.Not.Empty, message, null);
@@ -2310,8 +2178,7 @@ namespace UnityEngine.NUnit.Framework
         /// Assert that an array, list or other collection is not empty
         /// </summary>
         /// <param name="collection">An array, list or other collection implementing ICollection</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotEmpty(IEnumerable collection)
         {
             Assert.That(collection, Is.Not.Empty, null, null);
@@ -2327,8 +2194,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="aString">The string to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNullOrEmpty(string aString, string message, params object[] args)
         {
             Assert.That(aString, new NullOrEmptyStringConstraint(), message, args);
@@ -2338,8 +2204,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="aString">The string to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNullOrEmpty(string aString, string message)
         {
             Assert.That(aString, new NullOrEmptyStringConstraint(), message, null);
@@ -2348,8 +2213,7 @@ namespace UnityEngine.NUnit.Framework
         /// Assert that a string is either null or equal to string.Empty
         /// </summary>
         /// <param name="aString">The string to be tested</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNullOrEmpty(string aString)
         {
             Assert.That(aString, new NullOrEmptyStringConstraint(), null, null);
@@ -2365,8 +2229,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="aString">The string to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotNullOrEmpty(string aString, string message, params object[] args)
         {
             Assert.That(aString, new NotConstraint(new NullOrEmptyStringConstraint()), message, args);
@@ -2376,8 +2239,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="aString">The string to be tested</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotNullOrEmpty(string aString, string message)
         {
             Assert.That(aString, new NotConstraint(new NullOrEmptyStringConstraint()), message, null);
@@ -2386,8 +2248,7 @@ namespace UnityEngine.NUnit.Framework
         /// Assert that a string is not null or empty
         /// </summary>
         /// <param name="aString">The string to be tested</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotNullOrEmpty(string aString)
         {
             Assert.That(aString, new NotConstraint(new NullOrEmptyStringConstraint()), null, null);
@@ -2404,8 +2265,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The object under examination</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsAssignableFrom(Type expected, object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.AssignableFrom(expected), message, args);
@@ -2416,8 +2276,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected Type.</param>
         /// <param name="actual">The object under examination</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsAssignableFrom(Type expected, object actual, string message)
         {
             Assert.That(actual, Is.AssignableFrom(expected), message, null);
@@ -2427,8 +2286,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected Type.</param>
         /// <param name="actual">The object under examination</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsAssignableFrom(Type expected, object actual)
         {
             Assert.That(actual, Is.AssignableFrom(expected), null, null);
@@ -2446,8 +2304,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The object under examination</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsAssignableFrom<T>(object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.AssignableFrom(typeof(T)), message, args);
@@ -2458,8 +2315,7 @@ namespace UnityEngine.NUnit.Framework
         /// <typeparam name="T">The expected Type.</typeparam>
         /// <param name="actual">The object under examination</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsAssignableFrom<T>(object actual, string message)
         {
             Assert.That(actual, Is.AssignableFrom(typeof(T)), message, null);
@@ -2469,8 +2325,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <typeparam name="T">The expected Type.</typeparam>
         /// <param name="actual">The object under examination</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsAssignableFrom<T>(object actual)
         {
             Assert.That(actual, Is.AssignableFrom(typeof(T)), null, null);
@@ -2488,8 +2343,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The object under examination</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotAssignableFrom(Type expected, object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.AssignableFrom(expected), message, args);
@@ -2500,8 +2354,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected Type.</param>
         /// <param name="actual">The object under examination</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotAssignableFrom(Type expected, object actual, string message)
         {
             Assert.That(actual, Is.Not.AssignableFrom(expected), message, null);
@@ -2511,8 +2364,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected Type.</param>
         /// <param name="actual">The object under examination</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotAssignableFrom(Type expected, object actual)
         {
             Assert.That(actual, Is.Not.AssignableFrom(expected), null, null);
@@ -2530,8 +2382,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The object under examination</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotAssignableFrom<T>(object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.AssignableFrom(typeof(T)), message, args);
@@ -2542,8 +2393,7 @@ namespace UnityEngine.NUnit.Framework
         /// <typeparam name="T">The expected Type.</typeparam>
         /// <param name="actual">The object under examination</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotAssignableFrom<T>(object actual, string message)
         {
             Assert.That(actual, Is.Not.AssignableFrom(typeof(T)), message, null);
@@ -2553,8 +2403,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <typeparam name="T">The expected Type.</typeparam>
         /// <param name="actual">The object under examination</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotAssignableFrom<T>(object actual)
         {
             Assert.That(actual, Is.Not.AssignableFrom(typeof(T)), null, null);
@@ -2572,8 +2421,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The object being examined</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsInstanceOf(Type expected, object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.InstanceOf(expected), message, args);
@@ -2584,8 +2432,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected Type</param>
         /// <param name="actual">The object being examined</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsInstanceOf(Type expected, object actual, string message)
         {
             Assert.That(actual, Is.InstanceOf(expected), message, null);
@@ -2595,8 +2442,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected Type</param>
         /// <param name="actual">The object being examined</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsInstanceOf(Type expected, object actual)
         {
             Assert.That(actual, Is.InstanceOf(expected), null, null);
@@ -2610,8 +2456,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
         [Obsolete]
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsInstanceOfType(Type expected, object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.InstanceOf(expected), message, args);
@@ -2623,8 +2468,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The object being examined</param>
         /// <param name="message">The message to display in case of failure</param>
         [Obsolete]
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsInstanceOfType(Type expected, object actual, string message)
         {
             Assert.That(actual, Is.InstanceOf(expected), message, null);
@@ -2635,8 +2479,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected Type</param>
         /// <param name="actual">The object being examined</param>
         [Obsolete]
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsInstanceOfType(Type expected, object actual)
         {
             Assert.That(actual, Is.InstanceOf(expected), null, null);
@@ -2654,8 +2497,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The object being examined</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsInstanceOf<T>(object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.InstanceOf(typeof(T)), message, args);
@@ -2666,8 +2508,7 @@ namespace UnityEngine.NUnit.Framework
         /// <typeparam name="T">The expected Type</typeparam>
         /// <param name="actual">The object being examined</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsInstanceOf<T>(object actual, string message)
         {
             Assert.That(actual, Is.InstanceOf(typeof(T)), message, null);
@@ -2677,8 +2518,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <typeparam name="T">The expected Type</typeparam>
         /// <param name="actual">The object being examined</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsInstanceOf<T>(object actual)
         {
             Assert.That(actual, Is.InstanceOf(typeof(T)), null, null);
@@ -2696,8 +2536,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The object being examined</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotInstanceOf(Type expected, object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.InstanceOf(expected), message, args);
@@ -2708,8 +2547,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected Type</param>
         /// <param name="actual">The object being examined</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotInstanceOf(Type expected, object actual, string message)
         {
             Assert.That(actual, Is.Not.InstanceOf(expected), message, null);
@@ -2719,8 +2557,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected Type</param>
         /// <param name="actual">The object being examined</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotInstanceOf(Type expected, object actual)
         {
             Assert.That(actual, Is.Not.InstanceOf(expected), null, null);
@@ -2734,8 +2571,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
         [Obsolete]
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotInstanceOfType(Type expected, object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.InstanceOf(expected), message, args);
@@ -2747,8 +2583,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The object being examined</param>
         /// <param name="message">The message to display in case of failure</param>
         [Obsolete]
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotInstanceOfType(Type expected, object actual, string message)
         {
             Assert.That(actual, Is.Not.InstanceOf(expected), message, null);
@@ -2759,8 +2594,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected Type</param>
         /// <param name="actual">The object being examined</param>
         [Obsolete]
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotInstanceOfType(Type expected, object actual)
         {
             Assert.That(actual, Is.Not.InstanceOf(expected), null, null);
@@ -2778,8 +2612,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The object being examined</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotInstanceOf<T>(object actual, string message, params object[] args)
         {
             Assert.That(actual, Is.Not.InstanceOf(typeof(T)), message, args);
@@ -2790,8 +2623,7 @@ namespace UnityEngine.NUnit.Framework
         /// <typeparam name="T">The expected Type</typeparam>
         /// <param name="actual">The object being examined</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotInstanceOf<T>(object actual, string message)
         {
             Assert.That(actual, Is.Not.InstanceOf(typeof(T)), message, null);
@@ -2801,8 +2633,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <typeparam name="T">The expected Type</typeparam>
         /// <param name="actual">The object being examined</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void IsNotInstanceOf<T>(object actual)
         {
             Assert.That(actual, Is.Not.InstanceOf(typeof(T)), null, null);
@@ -2822,8 +2653,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(int arg1, int arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, args);
@@ -2836,8 +2666,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(int arg1, int arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, null);
@@ -2849,8 +2678,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(int arg1, int arg2)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), null, null);
@@ -2865,8 +2693,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(uint arg1, uint arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, args);
@@ -2879,8 +2706,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(uint arg1, uint arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, null);
@@ -2892,8 +2718,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(uint arg1, uint arg2)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), null, null);
@@ -2908,8 +2733,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(long arg1, long arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, args);
@@ -2922,8 +2746,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(long arg1, long arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, null);
@@ -2935,8 +2758,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(long arg1, long arg2)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), null, null);
@@ -2951,8 +2773,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(ulong arg1, ulong arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, args);
@@ -2965,8 +2786,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(ulong arg1, ulong arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, null);
@@ -2978,8 +2798,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(ulong arg1, ulong arg2)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), null, null);
@@ -2994,8 +2813,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(decimal arg1, decimal arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, args);
@@ -3008,8 +2826,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(decimal arg1, decimal arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, null);
@@ -3021,8 +2838,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(decimal arg1, decimal arg2)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), null, null);
@@ -3037,8 +2853,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(double arg1, double arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, args);
@@ -3051,8 +2866,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(double arg1, double arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, null);
@@ -3064,8 +2878,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(double arg1, double arg2)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), null, null);
@@ -3080,8 +2893,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(float arg1, float arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, args);
@@ -3094,8 +2906,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(float arg1, float arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, null);
@@ -3107,8 +2918,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(float arg1, float arg2)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), null, null);
@@ -3123,8 +2933,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(IComparable arg1, IComparable arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, args);
@@ -3137,8 +2946,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(IComparable arg1, IComparable arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), message, null);
@@ -3150,8 +2958,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Greater(IComparable arg1, IComparable arg2)
         {
             Assert.That(arg1, Is.GreaterThan(arg2), null, null);
@@ -3170,8 +2977,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(int arg1, int arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, args);
@@ -3184,8 +2990,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(int arg1, int arg2, string message)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, null);
@@ -3197,8 +3002,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(int arg1, int arg2)
         {
             Assert.That(arg1, Is.LessThan(arg2), null, null);
@@ -3213,8 +3017,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(uint arg1, uint arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, args);
@@ -3227,8 +3030,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(uint arg1, uint arg2, string message)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, null);
@@ -3240,8 +3042,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(uint arg1, uint arg2)
         {
             Assert.That(arg1, Is.LessThan(arg2), null, null);
@@ -3256,8 +3057,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(long arg1, long arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, args);
@@ -3270,8 +3070,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(long arg1, long arg2, string message)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, null);
@@ -3283,8 +3082,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(long arg1, long arg2)
         {
             Assert.That(arg1, Is.LessThan(arg2), null, null);
@@ -3299,8 +3097,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(ulong arg1, ulong arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, args);
@@ -3313,8 +3110,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(ulong arg1, ulong arg2, string message)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, null);
@@ -3326,8 +3122,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(ulong arg1, ulong arg2)
         {
             Assert.That(arg1, Is.LessThan(arg2), null, null);
@@ -3342,8 +3137,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(decimal arg1, decimal arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, args);
@@ -3356,8 +3150,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(decimal arg1, decimal arg2, string message)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, null);
@@ -3369,8 +3162,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(decimal arg1, decimal arg2)
         {
             Assert.That(arg1, Is.LessThan(arg2), null, null);
@@ -3385,8 +3177,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(double arg1, double arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, args);
@@ -3399,8 +3190,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(double arg1, double arg2, string message)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, null);
@@ -3412,8 +3202,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(double arg1, double arg2)
         {
             Assert.That(arg1, Is.LessThan(arg2), null, null);
@@ -3428,8 +3217,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(float arg1, float arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, args);
@@ -3442,8 +3230,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(float arg1, float arg2, string message)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, null);
@@ -3455,8 +3242,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(float arg1, float arg2)
         {
             Assert.That(arg1, Is.LessThan(arg2), null, null);
@@ -3471,8 +3257,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(IComparable arg1, IComparable arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, args);
@@ -3485,8 +3270,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(IComparable arg1, IComparable arg2, string message)
         {
             Assert.That(arg1, Is.LessThan(arg2), message, null);
@@ -3498,8 +3282,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Less(IComparable arg1, IComparable arg2)
         {
             Assert.That(arg1, Is.LessThan(arg2), null, null);
@@ -3518,8 +3301,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(int arg1, int arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, args);
@@ -3532,8 +3314,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(int arg1, int arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, null);
@@ -3545,8 +3326,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(int arg1, int arg2)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), null, null);
@@ -3561,8 +3341,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(uint arg1, uint arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, args);
@@ -3575,8 +3354,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(uint arg1, uint arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, null);
@@ -3588,8 +3366,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(uint arg1, uint arg2)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), null, null);
@@ -3604,8 +3381,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(long arg1, long arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, args);
@@ -3618,8 +3394,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(long arg1, long arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, null);
@@ -3631,8 +3406,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(long arg1, long arg2)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), null, null);
@@ -3647,8 +3421,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(ulong arg1, ulong arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, args);
@@ -3661,8 +3434,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(ulong arg1, ulong arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, null);
@@ -3674,8 +3446,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(ulong arg1, ulong arg2)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), null, null);
@@ -3690,8 +3461,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(decimal arg1, decimal arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, args);
@@ -3704,8 +3474,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(decimal arg1, decimal arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, null);
@@ -3717,8 +3486,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(decimal arg1, decimal arg2)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), null, null);
@@ -3733,8 +3501,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(double arg1, double arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, args);
@@ -3747,8 +3514,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(double arg1, double arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, null);
@@ -3760,8 +3526,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(double arg1, double arg2)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), null, null);
@@ -3776,8 +3541,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(float arg1, float arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, args);
@@ -3790,8 +3554,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(float arg1, float arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, null);
@@ -3803,8 +3566,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(float arg1, float arg2)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), null, null);
@@ -3819,8 +3581,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(IComparable arg1, IComparable arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, args);
@@ -3833,8 +3594,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(IComparable arg1, IComparable arg2, string message)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), message, null);
@@ -3846,8 +3606,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be greater</param>
         /// <param name="arg2">The second value, expected to be less</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void GreaterOrEqual(IComparable arg1, IComparable arg2)
         {
             Assert.That(arg1, Is.GreaterThanOrEqualTo(arg2), null, null);
@@ -3866,8 +3625,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(int arg1, int arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, args);
@@ -3880,8 +3638,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(int arg1, int arg2, string message)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, null);
@@ -3893,8 +3650,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(int arg1, int arg2)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), null, null);
@@ -3909,8 +3665,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(uint arg1, uint arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, args);
@@ -3923,8 +3678,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(uint arg1, uint arg2, string message)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, null);
@@ -3936,8 +3690,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(uint arg1, uint arg2)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), null, null);
@@ -3952,8 +3705,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(long arg1, long arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, args);
@@ -3966,8 +3718,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(long arg1, long arg2, string message)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, null);
@@ -3979,8 +3730,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(long arg1, long arg2)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), null, null);
@@ -3995,8 +3745,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(ulong arg1, ulong arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, args);
@@ -4009,8 +3758,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(ulong arg1, ulong arg2, string message)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, null);
@@ -4022,8 +3770,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(ulong arg1, ulong arg2)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), null, null);
@@ -4038,8 +3785,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(decimal arg1, decimal arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, args);
@@ -4052,8 +3798,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(decimal arg1, decimal arg2, string message)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, null);
@@ -4065,8 +3810,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(decimal arg1, decimal arg2)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), null, null);
@@ -4081,8 +3825,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(double arg1, double arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, args);
@@ -4095,8 +3838,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(double arg1, double arg2, string message)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, null);
@@ -4108,8 +3850,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(double arg1, double arg2)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), null, null);
@@ -4124,8 +3865,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(float arg1, float arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, args);
@@ -4138,8 +3878,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(float arg1, float arg2, string message)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, null);
@@ -4151,8 +3890,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(float arg1, float arg2)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), null, null);
@@ -4167,8 +3905,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(IComparable arg1, IComparable arg2, string message, params object[] args)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, args);
@@ -4181,8 +3918,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(IComparable arg1, IComparable arg2, string message)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), message, null);
@@ -4194,8 +3930,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="arg1">The first value, expected to be less</param>
         /// <param name="arg2">The second value, expected to be greater</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void LessOrEqual(IComparable arg1, IComparable arg2)
         {
             Assert.That(arg1, Is.LessThanOrEqualTo(arg2), null, null);
@@ -4212,8 +3947,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="actual">The list to be examined</param>
         /// <param name="message">The message to display in case of failure</param>
         /// <param name="args">Array of objects to be used in formatting the message</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Contains(object expected, ICollection actual, string message, params object[] args)
         {
             Assert.That(actual, new CollectionContainsConstraint(expected), message, args);
@@ -4224,8 +3958,7 @@ namespace UnityEngine.NUnit.Framework
         /// <param name="expected">The expected object</param>
         /// <param name="actual">The list to be examined</param>
         /// <param name="message">The message to display in case of failure</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Contains(object expected, ICollection actual, string message)
         {
             Assert.That(actual, new CollectionContainsConstraint(expected), message, null);
@@ -4235,8 +3968,7 @@ namespace UnityEngine.NUnit.Framework
         /// </summary>
         /// <param name="expected">The expected object</param>
         /// <param name="actual">The list to be examined</param>
-        [Conditional("UNITY_EDITOR")]
-        [Conditional("DEVELOPMENT_BUILD")]
+        [Conditional("UNITY_ASSERTIONS")]
         public static void Contains(object expected, ICollection actual)
         {
             Assert.That(actual, new CollectionContainsConstraint(expected), null, null);
