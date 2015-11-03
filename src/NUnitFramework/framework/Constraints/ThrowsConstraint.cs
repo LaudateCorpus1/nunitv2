@@ -6,7 +6,7 @@
 
 using System;
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// ThrowsConstraint is used to test the exception thrown by 

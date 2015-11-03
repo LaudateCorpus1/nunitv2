@@ -4,7 +4,7 @@
 // obtain a copy of the license at http://nunit.org/
 // ****************************************************************
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// Modes in which the tolerance value for a comparison can be interpreted.

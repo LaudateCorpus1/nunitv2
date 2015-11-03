@@ -6,7 +6,7 @@
 
 using System;
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// ThrowsNothingConstraint tests that a delegate does not

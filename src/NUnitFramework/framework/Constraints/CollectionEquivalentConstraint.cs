@@ -6,7 +6,7 @@
 
 using System.Collections;
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// CollectionEquivalentCOnstraint is used to determine whether two

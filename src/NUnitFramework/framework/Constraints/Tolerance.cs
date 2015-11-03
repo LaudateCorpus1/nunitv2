@@ -6,7 +6,7 @@
 
 using System;
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// The Tolerance class generalizes the notion of a tolerance

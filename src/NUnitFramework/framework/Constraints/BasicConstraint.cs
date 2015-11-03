@@ -6,7 +6,7 @@
 
 using System;
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// BasicConstraint is the abstract base for constraints that

@@ -4,7 +4,7 @@
 // obtain a copy of the license at http://nunit.org
 // ****************************************************************
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// Operator that requires at least one of it's arguments to succeed

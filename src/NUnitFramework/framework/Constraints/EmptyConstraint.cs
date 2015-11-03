@@ -6,7 +6,7 @@
 
 using System;
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
 	/// <summary>
 	/// EmptyConstraint tests a whether a string or collection is empty,

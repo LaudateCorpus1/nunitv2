@@ -6,7 +6,7 @@
 
 using System.Collections;
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// UniqueItemsConstraint tests whether all the items in a 

@@ -6,7 +6,7 @@
 
 using System;
 
-namespace NUnit.Framework
+namespace UnityEngine.NUnit.Framework
 {
 	/// <summary>
 	/// GlobalSettings is a place for setting default values used

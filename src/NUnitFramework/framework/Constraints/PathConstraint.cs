@@ -7,7 +7,7 @@
 using System;
 using System.IO;
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
 	/// PathConstraint serves as the abstract base of constraints

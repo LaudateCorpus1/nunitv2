@@ -4,7 +4,7 @@
 // obtain a copy of the license at http://nunit.org
 // ****************************************************************
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// AndConstraint succeeds only if both members succeed.

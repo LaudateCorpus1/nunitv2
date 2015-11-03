@@ -6,9 +6,9 @@
 
 using System;
 using System.Collections;
-using NUnit.Framework.Constraints;
+using UnityEngine.NUnit.Framework.Constraints;
 
-namespace NUnit.Framework
+namespace UnityEngine.NUnit.Framework
 {
     /// <summary>
     /// Helper class with properties and methods that supply

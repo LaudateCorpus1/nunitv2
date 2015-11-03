@@ -12,7 +12,7 @@ using System.Text;
 using System.Collections.Generic;
 #endif
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// CollectionOrderedConstraint is used to test whether a collection is ordered.

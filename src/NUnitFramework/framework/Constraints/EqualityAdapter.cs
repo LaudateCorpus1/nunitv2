@@ -10,7 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 #endif
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// EqualityAdapter class handles all equality comparisons

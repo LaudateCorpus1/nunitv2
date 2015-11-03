@@ -6,7 +6,7 @@
 
 using System;
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
 	/// <summary>
 	/// The Numerics class contains common operations on numeric values.

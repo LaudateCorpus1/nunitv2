@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NUnit.Framework
+namespace UnityEngine.NUnit.Framework
 {
     /// <summary>
     /// Class used to guard against unexpected argument values

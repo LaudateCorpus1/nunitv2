@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{53CD1648-502F-40BF-B14E-DD415D28B68B}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Unity.NUnit.Framework</RootNamespace>
-    <AssemblyName>NUnitAssertions</AssemblyName>
+    <RootNamespace>UnityEngine.NUnit.Framework</RootNamespace>
+    <AssemblyName>UnityEngine.NUnitAssertions</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -21,6 +21,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>full</DebugType>

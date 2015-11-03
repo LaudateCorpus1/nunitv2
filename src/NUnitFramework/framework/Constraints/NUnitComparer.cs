@@ -11,7 +11,7 @@ using System.Reflection;
 using System.Collections.Generic;
 #endif
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// NUnitComparer encapsulates NUnit's default behavior

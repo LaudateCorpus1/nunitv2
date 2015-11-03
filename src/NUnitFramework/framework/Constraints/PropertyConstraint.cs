@@ -7,7 +7,7 @@
 using System;
 using System.Reflection;
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
 	/// <summary>
 	/// PropertyConstraint extracts a named property and uses

@@ -7,7 +7,7 @@
 using System;
 using System.Collections;
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// CollectionConstraint is the abstract base class for

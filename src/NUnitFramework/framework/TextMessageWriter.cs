@@ -7,9 +7,9 @@
 using System;
 using System.Collections;
 using System.Globalization;
-using NUnit.Framework.Constraints;
+using UnityEngine.NUnit.Framework.Constraints;
 
-namespace NUnit.Framework
+namespace UnityEngine.NUnit.Framework
 {
 	/// <summary>
 	/// TextMessageWriter writes constraint descriptions and messages

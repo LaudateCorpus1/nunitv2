@@ -10,7 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 #endif
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// Abstract base class for constraints that compare values to

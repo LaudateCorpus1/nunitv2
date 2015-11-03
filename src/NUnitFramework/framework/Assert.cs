@@ -8,9 +8,9 @@ using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Diagnostics;
-using NUnit.Framework.Constraints;
+using UnityEngine.NUnit.Framework.Constraints;
 
-namespace NUnit.Framework
+namespace UnityEngine.NUnit.Framework
 {
     /// <summary>
     /// Delegate used by tests that execute code and

@@ -12,7 +12,7 @@ using System.Reflection;
 using System.Collections.Generic;
 #endif
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// NUnitEqualityComparer encapsulates NUnit's handling of

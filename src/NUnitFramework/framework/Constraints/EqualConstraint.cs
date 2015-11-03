@@ -11,7 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 #endif
 
-namespace NUnit.Framework.Constraints
+namespace UnityEngine.NUnit.Framework.Constraints
 {
     /// <summary>
     /// EqualConstraint is able to compare an actual value with the
