@@ -10,7 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 #endif
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// CollectionItemsEqualConstraint is the abstract base class for all

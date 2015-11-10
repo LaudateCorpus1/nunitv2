@@ -6,7 +6,7 @@
 
 using System;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// ResolvableConstraintExpression is used to represent a compound

@@ -7,7 +7,7 @@
 using System;
 using System.Collections;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// SomeItemsConstraint applies another constraint to each

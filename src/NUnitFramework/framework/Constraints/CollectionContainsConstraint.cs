@@ -6,7 +6,7 @@
 
 using System.Collections;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// CollectionContainsConstraint is used to test whether a collection

@@ -4,7 +4,7 @@
 // obtain a copy of the license at http://nunit.org
 // ****************************************************************
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// NaNConstraint tests that the actual value is a double or float NaN

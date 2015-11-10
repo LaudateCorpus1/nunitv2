@@ -8,7 +8,7 @@ using System;
 using System.IO;
 using System.Xml.Serialization;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// XmlSerializableConstraint tests whether 

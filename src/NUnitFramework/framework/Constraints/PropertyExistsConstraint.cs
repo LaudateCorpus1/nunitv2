@@ -7,7 +7,7 @@
 using System;
 using System.Reflection;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// PropertyExistsConstraint tests that a named property

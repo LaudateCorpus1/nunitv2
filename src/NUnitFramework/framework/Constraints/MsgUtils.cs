@@ -8,7 +8,7 @@ using System;
 using System.Text;
 using System.Collections;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// Static methods used in creating messages

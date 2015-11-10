@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// FailurePoint class represents one point of failure

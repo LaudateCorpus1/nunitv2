@@ -6,7 +6,7 @@
 
 using System;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// InstanceOfTypeConstraint is used to test that an object

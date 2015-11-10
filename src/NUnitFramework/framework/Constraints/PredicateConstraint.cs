@@ -8,7 +8,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// Predicate constraint wraps a Predicate in a constraint,

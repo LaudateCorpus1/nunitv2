@@ -6,7 +6,7 @@
 
 using System.Collections;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// EmptyCollectionConstraint tests whether a collection is empty. 

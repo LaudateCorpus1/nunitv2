@@ -6,7 +6,7 @@
 using System;
 using System.Threading;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     ///<summary>
     /// Applies a delay to the match so that a match can be evaluated in the future.

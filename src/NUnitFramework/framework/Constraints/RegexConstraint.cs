@@ -7,7 +7,7 @@
 #if !NETCF
 using System.Text.RegularExpressions;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// RegexConstraint can test whether a string matches

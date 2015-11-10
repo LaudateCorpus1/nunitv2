@@ -8,7 +8,7 @@ using System;
 using System.Collections;
 using System.IO;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
     /// <summary>
     /// EmptyDirectoryConstraint is used to test that a directory is empty

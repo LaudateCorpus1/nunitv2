@@ -7,7 +7,7 @@
 using System.IO;
 using System.Collections;
 
-namespace UnityEngine.NUnit.Framework.Constraints
+namespace UnityEngine.Testing.Assertions.Constraints
 {
 	/// <summary>
 	/// MessageWriter is the abstract base for classes that write
