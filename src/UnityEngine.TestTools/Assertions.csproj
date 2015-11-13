@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{53CD1648-502F-40BF-B14E-DD415D28B68B}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>UnityEngine.Testing.Assertions</RootNamespace>
-    <AssemblyName>UnityEngine.Testing.Assertions</AssemblyName>
+    <RootNamespace>UnityEngine.TestTools.Assertions</RootNamespace>
+    <AssemblyName>UnityEngine.TestTools.Assertions</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
