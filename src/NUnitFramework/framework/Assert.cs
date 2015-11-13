@@ -8,9 +8,9 @@ using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Diagnostics;
-using UnityEngine.Testing.Assertions.Constraints;
+using UnityEngine.TestTools.Assertions.Constraints;
 
-namespace UnityEngine.Testing.Assertions
+namespace UnityEngine.TestTools.Assertions
 {
     /// <summary>
     /// Delegate used by tests that execute code and

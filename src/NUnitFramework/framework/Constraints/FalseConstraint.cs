@@ -4,7 +4,7 @@
 // obtain a copy of the license at http://nunit.org
 // ****************************************************************
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
     /// <summary>
     /// FalseConstraint tests that the actual value is false

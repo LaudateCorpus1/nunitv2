@@ -4,7 +4,7 @@
 // obtain a copy of the license at http://nunit.org
 // ****************************************************************
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
     /// <summary>
     /// Operator that tests that an exception is thrown and

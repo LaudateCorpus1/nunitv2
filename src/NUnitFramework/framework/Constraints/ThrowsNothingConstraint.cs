@@ -6,7 +6,7 @@
 
 using System;
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
     /// <summary>
     /// ThrowsNothingConstraint tests that a delegate does not

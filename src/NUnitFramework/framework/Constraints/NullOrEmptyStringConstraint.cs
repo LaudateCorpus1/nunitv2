@@ -6,7 +6,7 @@
 
 using System;
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
     /// <summary>
     /// NullEmptyStringConstraint tests whether a string is either null or empty.

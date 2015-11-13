@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UnityEngine.Testing.Assertions
+namespace UnityEngine.TestTools.Assertions
 {
     /// <summary>
     /// Class used to guard against unexpected argument values

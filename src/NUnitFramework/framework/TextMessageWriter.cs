@@ -7,9 +7,9 @@
 using System;
 using System.Collections;
 using System.Globalization;
-using UnityEngine.Testing.Assertions.Constraints;
+using UnityEngine.TestTools.Assertions.Constraints;
 
-namespace UnityEngine.Testing.Assertions
+namespace UnityEngine.TestTools.Assertions
 {
 	/// <summary>
 	/// TextMessageWriter writes constraint descriptions and messages

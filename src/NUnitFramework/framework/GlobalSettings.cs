@@ -6,7 +6,7 @@
 
 using System;
 
-namespace UnityEngine.Testing.Assertions
+namespace UnityEngine.TestTools.Assertions
 {
 	/// <summary>
 	/// GlobalSettings is a place for setting default values used

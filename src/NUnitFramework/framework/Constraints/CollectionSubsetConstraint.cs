@@ -6,7 +6,7 @@
 
 using System.Collections;
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
     /// <summary>
     /// CollectionSubsetConstraint is used to determine whether

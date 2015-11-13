@@ -11,7 +11,7 @@ using System.Reflection;
 using System.Collections.Generic;
 #endif
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
     /// <summary>
     /// NUnitComparer encapsulates NUnit's default behavior

@@ -7,7 +7,7 @@
 using System;
 using System.IO;
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
     /// <summary>
 	/// PathConstraint serves as the abstract base of constraints

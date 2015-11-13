@@ -6,9 +6,9 @@
 
 using System;
 using System.Collections;
-using UnityEngine.Testing.Assertions.Constraints;
+using UnityEngine.TestTools.Assertions.Constraints;
 
-namespace UnityEngine.Testing.Assertions
+namespace UnityEngine.TestTools.Assertions
 {
     /// <summary>
     /// Helper class with properties and methods that supply

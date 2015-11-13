@@ -4,7 +4,7 @@
 // obtain a copy of the license at http://nunit.org/
 // ****************************************************************
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
     /// <summary>
     /// Modes in which the tolerance value for a comparison can be interpreted.

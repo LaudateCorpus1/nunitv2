@@ -7,7 +7,7 @@
 using System;
 using System.Reflection;
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
 	/// <summary>
 	/// PropertyConstraint extracts a named property and uses

@@ -4,7 +4,7 @@
 // copyright ownership at http://nunit.org.
 // ****************************************************************
 
-namespace UnityEngine.Testing.Assertions 
+namespace UnityEngine.TestTools.Assertions 
 {
 	using System;
 	

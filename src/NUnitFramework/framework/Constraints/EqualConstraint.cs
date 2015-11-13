@@ -11,7 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 #endif
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
     /// <summary>
     /// EqualConstraint is able to compare an actual value with the

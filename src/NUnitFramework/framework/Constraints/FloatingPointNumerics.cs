@@ -9,7 +9,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
 
     /// <summary>Helper routines for working with floating point numbers</summary>

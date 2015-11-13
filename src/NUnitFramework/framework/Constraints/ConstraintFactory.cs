@@ -7,7 +7,7 @@
 using System;
 using System.Collections;
 
-namespace UnityEngine.Testing.Assertions.Constraints
+namespace UnityEngine.TestTools.Assertions.Constraints
 {
     /// <summary>
     /// Helper class with properties and methods that supply

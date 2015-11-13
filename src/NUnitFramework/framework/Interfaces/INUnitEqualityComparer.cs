@@ -6,7 +6,7 @@
 
 using System;
 
-namespace UnityEngine.Testing.Assertions
+namespace UnityEngine.TestTools.Assertions
 {
     /// <summary>
     /// 
@@ -20,7 +20,7 @@ namespace UnityEngine.Testing.Assertions
         /// <param name="y">The second object to compare</param>
         /// <param name="tolerance">The tolerance to use in the comparison</param>
         /// <returns></returns>
-        bool AreEqual(object x, object y, ref UnityEngine.Testing.Assertions.Constraints.Tolerance tolerance);
+        bool AreEqual(object x, object y, ref UnityEngine.TestTools.Assertions.Constraints.Tolerance tolerance);
     }
 
 #if CLR_2_0 || CLR_4_0
