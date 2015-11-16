@@ -46,7 +46,9 @@ namespace UnityEngine.TestTools.Assertions
         [EditorBrowsable(EditorBrowsableState.Never)]
         public static new bool Equals(object a, object b)
         {
-            throw new InvalidOperationException("Assert.Equals should not be used for Assertions");
+            GlobalSettings.AssertionExceptionSignaller.Signal(
+					new InvalidOperationException("Assert.Equals should not be used for Assertions"));
+			return false;
         }
 
         /// <summary>
@@ -58,7 +60,8 @@ namespace UnityEngine.TestTools.Assertions
         /// <param name="b"></param>
         public static new void ReferenceEquals(object a, object b)
         {
-            throw new InvalidOperationException("Assert.ReferenceEquals should not be used for Assertions");
+            GlobalSettings.AssertionExceptionSignaller.Signal(
+					new InvalidOperationException("Assert.ReferenceEquals should not be used for Assertions"));
         }
 
         #endregion
@@ -81,7 +84,7 @@ namespace UnityEngine.TestTools.Assertions
             else if (args != null && args.Length > 0)
                 message = string.Format(message, args);
 
-            throw new SuccessException(message);
+            GlobalSettings.AssertionExceptionSignaller.Signal(new SuccessException(message));
         }
 
         /// <summary>
@@ -124,7 +127,7 @@ namespace UnityEngine.TestTools.Assertions
             else if (args != null && args.Length > 0)
                 message = string.Format(message, args);
 
-            throw new AssertionException(message);
+            GlobalSettings.AssertionExceptionSignaller.Signal(new AssertionException(message));
         }
 
         /// <summary>
@@ -165,7 +168,7 @@ namespace UnityEngine.TestTools.Assertions
             else if (args != null && args.Length > 0)
                 message = string.Format(message, args);
 
-            throw new IgnoreException(message);
+            GlobalSettings.AssertionExceptionSignaller.Signal(new IgnoreException(message));
         }
 
         /// <summary>
@@ -205,7 +208,7 @@ namespace UnityEngine.TestTools.Assertions
             else if (args != null && args.Length > 0)
                 message = string.Format(message, args);
 
-            throw new InconclusiveException(message);
+            GlobalSettings.AssertionExceptionSignaller.Signal(new InconclusiveException(message));
         }
 
         /// <summary>
@@ -279,7 +282,7 @@ namespace UnityEngine.TestTools.Assertions
             {
                 MessageWriter writer = new TextMessageWriter(message, args);
                 constraint.WriteMessageTo(writer);
-                throw new AssertionException(writer.ToString());
+                GlobalSettings.AssertionExceptionSignaller.Signal(new AssertionException(writer.ToString()));
             }
         }
         #endregion
@@ -368,7 +371,7 @@ namespace UnityEngine.TestTools.Assertions
             {
                 MessageWriter writer = new TextMessageWriter(message, args);
                 constraint.WriteMessageTo(writer);
-                throw new AssertionException(writer.ToString());
+                GlobalSettings.AssertionExceptionSignaller.Signal(new AssertionException(writer.ToString()));
             }
         }
 #endif
@@ -421,7 +424,7 @@ namespace UnityEngine.TestTools.Assertions
 			{
 				MessageWriter writer = new TextMessageWriter(message, args);
 				constraint.WriteMessageTo(writer);
-				throw new AssertionException(writer.ToString());
+				GlobalSettings.AssertionExceptionSignaller.Signal(new AssertionException(writer.ToString());
 			}
 		}
 #else
@@ -468,7 +471,7 @@ namespace UnityEngine.TestTools.Assertions
             {
                 MessageWriter writer = new TextMessageWriter(message, args);
                 constraint.WriteMessageTo(writer);
-                throw new AssertionException(writer.ToString());
+                GlobalSettings.AssertionExceptionSignaller.Signal(new AssertionException(writer.ToString()));
             }
         }
 #endif
@@ -521,7 +524,7 @@ namespace UnityEngine.TestTools.Assertions
             {
                 MessageWriter writer = new TextMessageWriter(message, args);
                 constraint.WriteMessageTo(writer);
-                throw new AssertionException(writer.ToString());
+                GlobalSettings.AssertionExceptionSignaller.Signal(new AssertionException(writer.ToString());
             }
         }
 #endif

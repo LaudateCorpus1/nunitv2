@@ -18,5 +18,18 @@ namespace UnityEngine.TestTools.Assertions
 		/// Default tolerance for floating point equality
 		/// </summary>
 		public static double DefaultFloatingPointTolerance = 0.0d;
+
+		/// <summary>
+		/// The assertion exception signaller.
+		/// </summary>
+		public static ExceptionSignaller AssertionExceptionSignaller;
+
+		/// <summary>
+		/// Initializes the <see cref="UnityEngine.TestTools.Assertions.GlobalSettings"/> class.
+		/// </summary>
+		static GlobalSettings()
+		{
+			AssertionExceptionSignaller = new DefaultAssertionExceptionSignaller();
+		}
 	}
 }

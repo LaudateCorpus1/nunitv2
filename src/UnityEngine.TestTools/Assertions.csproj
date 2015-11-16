@@ -363,6 +363,12 @@
     <Compile Include="..\NUnitFramework\framework\Contains.cs">
       <Link>Contains.cs</Link>
     </Compile>
+    <Compile Include="..\NUnitFramework\framework\Interfaces\ExceptionSignaller.cs">
+      <Link>Interfaces\ExceptionSignaller.cs</Link>
+    </Compile>
+    <Compile Include="..\NUnitFramework\framework\DefaultAssertionExceptionSignaller.cs">
+      <Link>DefaultAssertionExceptionSignaller.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Xml" />
