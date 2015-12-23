@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -22,6 +22,7 @@
     <ConsolePause>False</ConsolePause>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DocumentationFile>Builds\Debug\UnityEngine.TestTools.Assertions.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>full</DebugType>
@@ -33,6 +34,7 @@
     <DebugSymbols>True</DebugSymbols>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <DefineConstants>UNITY_ASSERTIONS;</DefineConstants>
+    <DocumentationFile>Builds\Release\UnityEngine.TestTools.Assertions.xml</DocumentationFile>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -374,9 +376,5 @@
     <Reference Include="System.Xml" />
     <Reference Include="System" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Constraints\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Exceptions\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>

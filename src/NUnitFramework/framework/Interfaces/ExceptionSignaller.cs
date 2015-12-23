@@ -25,6 +25,9 @@ using System;
 
 namespace UnityEngine.TestTools.Assertions
 {
+	/// <summary>
+	/// Used by assertions to signal a failure.
+	/// </summary>
 	public interface ExceptionSignaller
 	{
 		/// <summary>

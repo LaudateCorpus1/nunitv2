@@ -25,8 +25,15 @@ using System;
 
 namespace UnityEngine.TestTools.Assertions
 {
+	/// <summary>
+	/// The default implementation of signaller used by assertions.
+	/// </summary>
 	public class DefaultAssertionExceptionSignaller : ExceptionSignaller
 	{
+		/// <summary>
+		/// Signals the specified exception.
+		/// </summary>
+		/// <param name="exception">The exception object.</param>
 		public void Signal(Exception exception)
 		{
 			throw exception;
